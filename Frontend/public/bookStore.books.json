@@ -1,0 +1,130 @@
+[{
+  "_id": {
+    "$oid": "66f6890f7647262f8300ee01"
+  },
+  "id": 1,
+  "name": "Java Fulll Stack",
+  "title": "",
+  "image": "https://img.freepik.com/free-vector/html5-programming-internet-website-development-web-application-engineering-script-writing-html-code-optimization-programmer-fixing-bugs_335657-2678.jpg?t=st=1727159323~exp=1727162923~hmac=a9b3f5bfad8c412046a08cf2d83050e7403e114df422a98da56f8e17a68598af&w=740"
+},
+{
+  "_id": {
+    "$oid": "66f6890f7647262f8300ee02"
+  },
+  "id": 2,
+  "name": "Python Full Stack ",
+  "title": "",
+  "price": 15000,
+  "category": "Free",
+  "image": "https://img.freepik.com/free-vector/front-end-concept-illustration_114360-22213.jpg?t=st=1727164468~exp=1727168068~hmac=f0f3746c0796904b31b2fbc96199fc87f0f06a7d9dc37873b2f05737017ec9cb&w=740"
+},
+{
+  "_id": {
+    "$oid": "66f6890f7647262f8300ee03"
+  },
+  "id": 3,
+  "name": "MERN Stack",
+  "title": "",
+  "price": 30,
+  "category": "Free",
+  "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-api-illustration_23-2149365021.jpg?t=st=1727164527~exp=1727168127~hmac=5c0951ca2f880eddb9a012e139f6c88d6f7658cdea8ff3dd5fcdcc8f2130b403&w=740"
+},
+{
+  "_id": {
+    "$oid": "66f6890f7647262f8300ee04"
+  },
+  "id": 4,
+  "name": "Data Science",
+  "title": "",
+  "price": 100,
+  "category": "Free",
+  "image": "https://img.freepik.com/free-vector/coding-concept-illustration_114360-939.jpg?t=st=1727164581~exp=1727168181~hmac=ac9f78ff7c676b949b53886854cd785b7fe2eacdda579e9964cd07458aec090f&w=740"
+},
+{
+  "_id": {
+    "$oid": "66f6890f7647262f8300ee05"
+  },
+  "id": 5,
+  "name": "Artificial intelligence",
+  "title": "",
+  "price": 100,
+  "category": "AI\n",
+  "image": "https://img.freepik.com/free-vector/coding-concept-illustration_114360-939.jpg?t=st=1727164581~exp=1727168181~hmac=ac9f78ff7c676b949b53886854cd785b7fe2eacdda579e9964cd07458aec090f&w=740"
+},
+{
+  "_id": {
+    "$oid": "66f6890f7647262f8300ee06"
+  },
+  "id": 6,
+  "name": "Application Development",
+  "title": "",
+  "price": 100,
+  "category": "AD",
+  "image": "https://img.freepik.com/free-vector/coding-concept-illustration_114360-939.jpg?t=st=1727164581~exp=1727168181~hmac=ac9f78ff7c676b949b53886854cd785b7fe2eacdda579e9964cd07458aec090f&w=740"
+},
+{
+  "_id": {
+    "$oid": "66f6890f7647262f8300ee07"
+  },
+  "id": 7,
+  "name": "Devops and Cloud Computing",
+  "title": "",
+  "price": 100,
+  "category": "CC",
+  "image": "https://img.freepik.com/free-vector/html5-programming-internet-website-development-web-application-engineering-script-writing-html-code-optimization-programmer-fixing-bugs_335657-2678.jpg?t=st=1727159323~exp=1727162923~hmac=a9b3f5bfad8c412046a08cf2d83050e7403e114df422a98da56f8e17a68598af&w=740"
+},
+{
+  "_id": {
+    "$oid": "66f6890f7647262f8300ee08"
+  },
+  "id": 8,
+  "name": "Salesforce",
+  "title": "",
+  "price": 200,
+  "category": "Salesforce",
+  "image": "https://img.freepik.com/free-vector/html5-programming-internet-website-development-web-application-engineering-script-writing-html-code-optimization-programmer-fixing-bugs_335657-2678.jpg?t=st=1727159323~exp=1727162923~hmac=a9b3f5bfad8c412046a08cf2d83050e7403e114df422a98da56f8e17a68598af&w=740"
+},
+{
+  "_id": {
+    "$oid": "66f6890f7647262f8300ee09"
+  },
+  "id": 9,
+  "name": "Digital Marketing",
+  "title": "",
+  "price": 200,
+  "category": "DM",
+  "image": "https://img.freepik.com/free-vector/html5-programming-internet-website-development-web-application-engineering-script-writing-html-code-optimization-programmer-fixing-bugs_335657-2678.jpg?t=st=1727159323~exp=1727162923~hmac=a9b3f5bfad8c412046a08cf2d83050e7403e114df422a98da56f8e17a68598af&w=740"
+},
+{
+  "_id": {
+    "$oid": "66f6890f7647262f8300ee0a"
+  },
+  "id": 10,
+  "name": "Graphics Designing",
+  "title": "",
+  "price": 200,
+  "category": "GD",
+  "image": "https://img.freepik.com/free-vector/html5-programming-internet-website-development-web-application-engineering-script-writing-html-code-optimization-programmer-fixing-bugs_335657-2678.jpg?t=st=1727159323~exp=1727162923~hmac=a9b3f5bfad8c412046a08cf2d83050e7403e114df422a98da56f8e17a68598af&w=740"
+},
+{
+  "_id": {
+    "$oid": "66f6890f7647262f8300ee0b"
+  },
+  "id": 11,
+  "name": "Video Editing",
+  "title": "",
+  "price": 200,
+  "category": "VI",
+  "image": "https://img.freepik.com/free-vector/html5-programming-internet-website-development-web-application-engineering-script-writing-html-code-optimization-programmer-fixing-bugs_335657-2678.jpg?t=st=1727159323~exp=1727162923~hmac=a9b3f5bfad8c412046a08cf2d83050e7403e114df422a98da56f8e17a68598af&w=740"
+},
+{
+  "_id": {
+    "$oid": "673863a07e4c7a9c882b66bf"
+  },
+  "id": 12,
+  "name": "MEAN Stack",
+  "title": "",
+  "price": 200,
+  "category": "VI",
+  "image": "https://img.freepik.com/free-vector/html5-programming-internet-website-development-web-application-engineering-script-writing-html-code-optimization-programmer-fixing-bugs_335657-2678.jpg?t=st=1727159323~exp=1727162923~hmac=a9b3f5bfad8c412046a08cf2d83050e7403e114df422a98da56f8e17a68598af&w=740"
+}]
