@@ -30,24 +30,19 @@
 ##Clone the repository:
 #
 bash
-#
 Copy code
-#
-git clone <repository-url>
-#
-Navigate to the server directory and install dependencies:
+git clone <repository-url>  
+Navigate to the project directory
 #
 bash
-#
 Copy code
+cd arraylogic-website  
+Install dependencies
 #
-cd server
-#
-npm install
-#
-Set up environment variables in a .env file for your database connection and API keys.
-#
-Start the server:
+bash
+Copy code
+npm install  
+Start the development server:
 #
 
 #Usage
