@@ -5,29 +5,30 @@
 ### Key Features
 
 ## 🖌️ Modern UI Design
-##📱 Mobile Responsiveness
+#
+## 📱 Mobile Responsivenes
 ## 📧 Email Integration
-##💬 WhatsApp Chat Support
-##📋 Contact Form
-##📅 Appointment Scheduler
-##🌐 Multilingual Support
-##📊 Analytics Dashboard
-##🎨 Dark Mode
+## 💬 WhatsApp Chat Support
+## 📋 Contact Form
+## 📅 Appointment Scheduler
+## 🌐 Multilingual Support
+## 📊 Analytics Dashboard
+## 🎨 Dark Mode
 
 #
-#Tech Stack
+# Tech Stack
 
-##Frontend Framework: ReactJS
-##Styling: Tailwind CSS
-##Email Service: Email.js
-##Chat Integration: WhatsApp API
-##Calendar: FullCalendar.js
-##State Management: Redux 
+## Frontend Framework: ReactJS
+## Styling: Tailwind CSS
+## Email Service: Email.js
+## Chat Integration: WhatsApp API
+## Calendar: FullCalendar.js
+## State Management: Redux 
 
 # Installation
 ## To run this project locally, follow these steps:
 
-##Clone the repository:
+## Clone the repository:
 #
 bash
 Copy code
@@ -45,7 +46,7 @@ npm install
 Start the development server:
 #
 
-#Usage
-###Navigate to the homepage to view company information.
-###Use the contact form to send messages directly via email.
-###Click the WhatsApp link to initiate a chat with the company.
+# Usage
+### Navigate to the homepage to view company information.
+### Use the contact form to send messages directly via email.
+### Click the WhatsApp link to initiate a chat with the company.
