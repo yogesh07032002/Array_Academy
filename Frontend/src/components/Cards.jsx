@@ -1,37 +1,43 @@
 import React from "react";
 
 function Cards({ item }) {
+  // Generate syllabus URL dynamically
+  const generateSyllabusURL = (id) => {
+    return `/syllabus/${id}-syllabus.pdf`; // Adjust the pattern to match your file naming convention
+  };
+
   return (
-    <>
-      <div className="mt-2 my-3 p-3 flex justify-center">
-        <div className="card bg-black w-92 shadow-xl hover:scale-105 duration-200 dark:text-white dark:border flex flex-col items-center p-4">
-          <figure className="mb-2">
+    <div>
+      <div className="mt-1 p-3 flex justify-center">
+        <div className="card bg-gradient-to-r from-purple-700 via-indigo-800 to-black w-92 shadow-xl hover:scale-105 duration-200 text-white border border-black flex flex-col items-center p-0 rounded-lg">
+          {/* Image Section */}
+          <figure className="overflow-hidden rounded-lg">
             <img
               src={item.image}
               alt={item.name} // Descriptive alt text for the image
-              className="rounded-lg max-w-full h-auto"
+              className="rounded-lg max-w-full h-auto hover:scale-110 transition-transform duration-500"
             />
           </figure>
-          <div className="card-body flex flex-col items-center">
-            <h2 className="card-title text-center text-xl font-semibold mb-2 text-white">
-              {item.name}
-            </h2>
-            <p className="text-center text-gray-400 mb-2">{item.title}</p>
 
-            {/* Download Syllabus Button */}
-            <div className="card-actions justify-center mt-2">
-              <a
-                href="/pdf/JAVA.pdf" // Correct relative path to your PDF file in the public folder
-                download="java.pdf" // Forces the download with the specified name
-                className="btn bg-purple-600 text-white hover:bg-purple-700 duration-200 px-6 py-2 rounded-lg"
-              >
-                Download Syllabus
-              </a>
-            </div>
+          {/* Card Body */}
+          <h2 className="card-title text-center text-white mt-3 pb-4 pt-2">
+            {item.name}
+            <p className="text-center">{item.title}</p>
+          </h2>
+
+          {/* Download Syllabus Button */}
+          <div className="card-actions justify-center mt-2">
+            <a
+              href={generateSyllabusURL(item.id)} // Dynamically generate syllabus URL
+              download // Enable download
+              className="btn bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-all duration-300 mb-4"
+            >
+              Download Syllabus
+            </a>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

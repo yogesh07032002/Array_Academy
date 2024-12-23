@@ -9,10 +9,6 @@ const ServiceSlider = () => {
   const [activeArrow, setActiveArrow] = useState(null); // Track active arrow
   const swiperRef = useRef(null); // Ref for Swiper instance
 
-  const handleMoreInfo = (course) => {
-    alert(`More information about ${course}`);
-  };
-
   const handleArrowClick = (direction) => {
     setActiveArrow(direction); // Mark the arrow as active
     if (swiperRef.current) {
@@ -23,9 +19,10 @@ const ServiceSlider = () => {
   };
 
   return (
-    <div className="max-w-screen-2xl container mx-auto py-16 px-4 relative">
-      <h2 className="text-center text-4xl font-bold mb-8 text-black ">
-        Our Courses
+    <div className="max-w-screen-2xl container mx-auto py:6 md:py-10 px-3 relative ">
+      <h2 className="text-center text-xl md:text-4xl   mt-2 md:mt-0 md:mb-8 text-black mb-2">
+        Transform Your Future: Best IT Courses Institute in Pune Delivers
+        Cutting-Edge IT Training!!
       </h2>
 
       <Swiper
@@ -52,218 +49,446 @@ const ServiceSlider = () => {
         className="service-slider"
       >
         {/* Java Full Stack */}
-        <SwiperSlide className="bg-gradient-to-r from-blue-500 to-purple-500 text-white p-8 rounded-lg shadow-lg text-center h-[400px] flex flex-col justify-between">
-          <h3 className="text-2xl font-semibold text-black">Java Full Stack</h3>
-          <p className="text-base">
-            Master full-stack development with Java, including Java, Spring
-            Boot, Hibernate, RESTful APIs, HTML, CSS, JavaScript, SQL, Git,
-            Maven, and web application architecture to unlock your career in
-            enterprise applications.
-          </p>
-         <Link to={"/course"}>
-         <button
-            className="mt-4 bg-white text-blue-600 py-2 px-6 rounded-lg shadow-lg hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50 transition duration-300"
-            // 
-            onClick={() => window.scrollTo(0, 0)} // Scroll to top on click
-          >
-            Learn More
-          </button>
-          </Link>
+        <SwiperSlide className="flex flex-col items-center justify-center p-8 rounded-lg shadow-lg bg-white border-black border-2  ">
+          
+          <div className="w-full flex flex-col items-center">
+            <img
+              src="./JavaFullStack.webp" // Replace with actual image URL
+              alt="Java Full Stack"
+              className="w-full h-full rounded-lg mb-4"
+            />
+
+            <h2 className=" text-xl md:text-2xl font-semibold text-orange-600 mb-2 text-center">
+              Java Full Stack
+            </h2>
+            <p className="mb-2 text-center">
+              Master full-stack development with Java, including Java, Spring
+              Boot, Hibernate, RESTful APIs, HTML, CSS, JavaScript, SQL, Git,
+              Maven, and web application architecture to unlock your career in
+              enterprise applications.
+            </p>
+            <Link to={"/course"}>
+              <button
+                className="bg-black text-white py-1 px-2 md:py-2 md:px-6 rounded-lg shadow-lg hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black transition duration-300"
+                onClick={() => window.scrollTo(0, 0)} // Scroll to top on click
+              >
+                Learn More
+              </button>
+            </Link>
+          </div>
         </SwiperSlide>
 
         {/* Python Full Stack */}
-        <SwiperSlide className="bg-gradient-to-r from-green-400 to-blue-500 text-white p-8 rounded-lg shadow-lg text-center h-[400px] flex flex-col justify-between">
-          <h3 className="text-2xl font-semibold text-black">
-            Python Full Stack
-          </h3>
-          <p className="text-base">
-            Learn Python along with Django, Flask, HTML, CSS, JavaScript,
-            PostgreSQL, Git, REST APIs, and web application architecture to
-            become a versatile developer capable of building dynamic, scalable
-            applications.
-          </p>
-          <Link to={"/course"}>
-          <button
-            className="mt-4 bg-white text-green-600 py-2 px-6 rounded-lg shadow-lg hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-opacity-50 transition duration-300"
-            onClick={() => window.scrollTo(0, 0)} 
-          >
-            Learn More
-          </button>
-          </Link>
+        <SwiperSlide className="flex flex-col items-center justify-center p-8 rounded-lg shadow-lg bg-white border-black border-2 ">
+          <div className="w-full flex flex-col items-center">
+            <img
+              src="./PythonFullStack.webp" // Replace with actual image URL
+              alt="Java Full Stack"
+              className="w-full aspect-video object-cover rounded-lg mb-4"
+              loading="lazy"
+            />
+
+            <h2 className="text-xl md:text-2xl font-semibold text-orange-600 mb-2 text-center">
+              Python Full Stack
+            </h2>
+            <p className=" mb-4 text-center">
+              Learn Python along with Django, Flask, HTML, CSS, JavaScript,
+              PostgreSQL, Git, REST APIs, and web application architecture to
+              become a versatile developer capable of building dynamic, scalable
+              applications.
+            </p>
+            <Link to={"/course"}>
+              <button
+                className="bg-black text-white py-1 px-3 md:py-2 md:px-6 rounded-lg shadow-lg hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-50 transition duration-300"
+                onClick={() => window.scrollTo(0, 0)} // Scroll to top on click
+              >
+                Learn More
+              </button>
+            </Link>
+          </div>
         </SwiperSlide>
 
         {/* MERN Stack */}
-        <SwiperSlide className="bg-gradient-to-r from-orange-500 to-red-500 text-white p-8 rounded-lg shadow-lg text-center h-[400px] flex flex-col justify-between">
-          <h3 className="text-2xl font-semibold text-black">MERN Stack</h3>
-          <p className="text-base">
-            Build modern web apps with MongoDB, Express, React, and Node.js,
-            along with JavaScript, RESTful APIs, Git, HTML, CSS, Redux, and
-            Webpack, to become proficient in the complete JavaScript solution.
-          </p>
-          <Link to={"/course"}>
-          <button
-            className="mt-4 bg-white text-orange-600 py-2 px-6 rounded-lg shadow-lg hover:bg-orange-100 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:ring-opacity-50 transition duration-300"
-            onClick={() => window.scrollTo(0, 0)}           >
-            Learn More
-          </button>
-          </Link>
+        <SwiperSlide className="flex flex-col items-center justify-center p-8 rounded-lg shadow-lg bg-white border-black border-2 ">
+        <div className="w-full flex flex-col items-center">
+            <img
+              src="./MERN.webp" // Replace with actual image URL
+              alt="Java Full Stack"
+              className="w-full aspect-video object-cover rounded-lg mb-4"
+              loading="lazy"
+
+            />
+            <h2 className="text-xl md:text-2xl font-semibold text-orange-600 mb-2 text-center">
+              MERN Stack
+            </h2>
+            <p className=" mb-4 text-center">
+              Build modern web apps with MongoDB, Express, React, and Node.js,
+              along with JavaScript, RESTful APIs, Git, HTML, CSS, Redux, and
+              Webpack, to become proficient in the complete JavaScript solution.
+            </p>
+            <Link to={"/course"}>
+              <button
+                className="bg-black text-white py-1 px-3 md:py-2 md:px-6 rounded-lg shadow-lg hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-50 transition duration-300"
+                onClick={() => window.scrollTo(0, 0)} // Scroll to top on click
+              >
+                Learn More
+              </button>
+            </Link>
+          </div>
         </SwiperSlide>
 
         {/* Data Science */}
-        <SwiperSlide className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white p-8 rounded-lg shadow-lg text-center h-[400px] flex flex-col justify-between">
-          <h3 className="text-2xl font-semibold text-black">Data Science</h3>
-          <p className="text-base">
-            Unlock the power of data with Python, R, SQL, Pandas, NumPy,
-            Matplotlib, machine learning algorithms, data visualization, data
-            cleaning, data mining, and big data tools to make data-driven
-            decisions.
-          </p>
-          <Link to={"/course"}>
-          <button
-            className="mt-4 bg-white text-teal-600 py-2 px-6 rounded-lg shadow-lg hover:bg-teal-100 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:ring-opacity-50 transition duration-300"
-            onClick={() => window.scrollTo(0, 0)}           >
-            Learn More
-          </button>
-          </Link>
+        <SwiperSlide className="flex flex-col items-center justify-center p-8 rounded-lg shadow-lg bg-white border-black border-2 ">
+        <div className="w-full flex flex-col items-center">
+            <img
+              src="./DataScience.webp" // Replace with actual image URL
+              alt="Java Full Stack"
+              className="w-full aspect-video object-cover rounded-lg mb-4"
+              loading="lazy"
+
+            />
+            <h2 className="text-xl md:text-2xl font-semibold text-orange-600 mb-2 text-center">
+              Data Science
+            </h2>
+            <p className=" mb-4 text-center">
+              Unlock the power of data with Python, R, SQL, Pandas, NumPy,
+              Matplotlib, machine learning algorithms, data visualization, data
+              cleaning, data mining, and big data tools to make data-driven
+              decisions.
+            </p>
+            <Link to={"/course"}>
+              <button
+                className="bg-black text-white py-1 px-3 md:py-2 md:px-6 rounded-lg shadow-lg hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-50 transition duration-300"
+                onClick={() => window.scrollTo(0, 0)} // Scroll to top on click
+              >
+                Learn More
+              </button>
+            </Link>
+          </div>
         </SwiperSlide>
 
         {/* ML & AI */}
-        <SwiperSlide className="bg-gradient-to-r from-red-400 to-orange-500 text-white p-8 rounded-lg shadow-lg text-center h-[400px] flex flex-col justify-between">
-          <h3 className="text-2xl font-semibold text-black">ML & AI</h3>
-          <p className="text-base">
-            Dive into the future with machine learning and artificial
-            intelligence using Python, TensorFlow, Keras, PyTorch, Neural
-            Networks, Deep Learning, NLP, data processing, and reinforcement
-            learning techniques.
-          </p>
-          <Link to={"/course"}>
-          <button
-            className="mt-4 bg-white text-red-600 py-2 px-6 rounded-lg shadow-lg hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-opacity-50 transition duration-300"
-            onClick={() => window.scrollTo(0, 0)}           >
-            Learn More
-          </button>
-          </Link>
+        <SwiperSlide className="flex flex-col items-center justify-center p-8 rounded-lg shadow-lg bg-white border-black border-2 ">
+        <div className="w-full flex flex-col items-center">
+            <img
+              src="./AIML.webp" // Replace with actual image URL
+              alt="Java Full Stack"
+              className="w-full aspect-video object-cover rounded-lg mb-4"
+              loading="lazy"
+
+            />
+            <h2 className="text-xl md:text-2xl font-semibold text-orange-600 mb-2 text-center">
+              ML & AI
+            </h2>
+            <p className=" mb-4 text-center">
+              Dive into the future with ML and AI using Python, TensorFlow,
+              Keras, PyTorch, Neural Networks, Deep Learning, NLP, data
+              processing, and reinforcement learning techniques. Gain experience
+              to build cutting-edge solutions .
+            </p>
+            <Link to={"/course"}>
+              <button
+                className="bg-black text-white py-1 px-3 md:py-2 md:px-6 rounded-lg shadow-lg hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-50 transition duration-300"
+                onClick={() => window.scrollTo(0, 0)} // Scroll to top on click
+              >
+                Learn More
+              </button>
+            </Link>
+          </div>
+        </SwiperSlide>
+        {/* DevOps and Cloud Computing */}
+        <SwiperSlide className="flex flex-col items-center justify-center p-8 rounded-lg shadow-lg bg-white border-black border-2 ">
+        <div className="w-full flex flex-col items-center">
+            <img
+              src="./DEVOPS.webp" // Replace with actual image URL
+              alt="Java Full Stack"
+              className="w-full aspect-video object-cover rounded-lg mb-4"
+              loading="lazy"
+
+            />
+            <h2 className="text-xl md:text-2xl font-semibold text-orange-600 mb-2 text-center">
+              DevOps and Cloud{" "}
+            </h2>
+            <p className=" mb-4 text-center">
+              Master the combined disciplines of DevOps and Cloud. Learn
+              automation, CI/CD, containerization, and cloud platforms like AWS,
+              Azure, and Google Cloud to build scalable systems.
+            </p>
+            <Link to={"/course"}>
+              <button
+                className="bg-black text-white py-2 px-6 md:py-2 md:px-6 rounded-lg shadow-lg hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-50 transition duration-300"
+                onClick={() => window.scrollTo(0, 0)} // Scroll to top on click
+              >
+                Learn More
+              </button>
+            </Link>
+          </div>
+        </SwiperSlide>
+
+        {/* UI/UX Design */}
+        <SwiperSlide className="flex flex-col items-center justify-center p-8 rounded-lg shadow-lg bg-white border-black border-2 ">
+        <div className="w-full flex flex-col items-center">
+            <img
+              src="./UIUX.webp" // Replace with actual image URL
+              alt="Java Full Stack"
+              className="w-full aspect-video object-cover rounded-lg mb-4"
+              loading="lazy"
+
+            />
+            <h2 className="text-xl md:text-2xl font-semibold text-orange-600 mb-2 text-center">
+              UI/UX Design
+            </h2>
+            <p className=" mb-4 text-center">
+              Learn the fundamentals of UI/UX Design, focusing on creating
+              visually appealing and user-friendly interfaces. Gain skills in
+              design tools, wireframing, prototyping, user research, and testing
+              to enhance experience.
+            </p>
+            <Link to={"/course"}>
+              <button
+                className="bg-black text-white py-1 px-3  md:py-2 md:px-6 rounded-lg shadow-lg hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-50 transition duration-300"
+                onClick={() => window.scrollTo(0, 0)} // Scroll to top on click
+              >
+                Learn More
+              </button>
+            </Link>
+          </div>
         </SwiperSlide>
 
         {/* MEAN Stack */}
-        <SwiperSlide className="bg-gradient-to-r from-indigo-500 to-blue-500 text-white p-8 rounded-lg shadow-lg text-center h-[400px] flex flex-col justify-between">
-          <h3 className="text-2xl font-semibold text-black">MEAN Stack</h3>
-          <p className="text-base">
-            Master the MEAN stack with MongoDB, Express, Angular, and Node.js,
-            and build dynamic web applications using JavaScript.
-          </p>
-          <Link to={"/course"}>
-          <button
-            className="mt-4 bg-white text-indigo-600 py-2 px-6 rounded-lg shadow-lg hover:bg-indigo-100 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-opacity-50 transition duration-300"
-            onClick={() => window.scrollTo(0, 0)}           >
-            Learn More
-          </button>
-          </Link>
+        <SwiperSlide className="flex flex-col items-center justify-center p-8 rounded-lg shadow-lg bg-white border-black border-2 ">
+        <div className="w-full flex flex-col items-center">
+            <img
+              src="./MEAN.webp" // Replace with actual image URL
+              alt="Java Full Stack"
+              className="w-full aspect-video object-cover rounded-lg mb-4"
+              loading="lazy"
+
+            />
+            <h2 className="text-xl md:text-2xl font-semibold text-orange-600 mb-2 text-center">
+              MEAN Stack
+            </h2>
+            <p className=" mb-4 text-center">
+              Build modern web apps with MongoDB, Express, Angular, and Node.js,
+              along with JavaScript, RESTful APIs, Git, HTML, CSS, Redux, and
+              Webpack, to become proficient in the complete JavaScript solution.
+            </p>
+            <Link to={"/course"}>
+              <button
+                className="bg-black text-white py-1 px-3 md:py-2 md:px-6 rounded-lg shadow-lg hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-50 transition duration-300"
+                onClick={() => window.scrollTo(0, 0)} // Scroll to top on click
+              >
+                Learn More
+              </button>
+            </Link>
+          </div>
+        </SwiperSlide>
+
+        {/* Software Testing */}
+        <SwiperSlide className="flex flex-col items-center justify-center p-8 rounded-lg shadow-lg bg-white border-black border-2 ">
+        <div className="w-full flex flex-col items-center">
+            <img
+              src="./TESTING.webp" // Replace with actual image URL
+              alt="Java Full Stack"
+              className="w-full aspect-video object-cover rounded-lg mb-4"
+              loading="lazy"
+
+            />
+            <h2 className="text-xl md:text-2xl font-semibold text-orange-600 mb-2 text-center">
+              Software Testing
+            </h2>
+            <p className=" mb-4 text-center">
+              Learn essential software testing skills and knowledge including
+              manual testing, automation testing, Selenium, JUnit, TestNG, and
+              CI/CD tools to ensure the quality and reliability of code of
+              software applications.
+            </p>
+            <Link to={"/course"}>
+              <button
+                className="bg-black text-white py-1 px-3 md:py-2 md:px-6 rounded-lg shadow-lg hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-50 transition duration-300"
+                onClick={() => window.scrollTo(0, 0)} // Scroll to top on click
+              >
+                Learn More
+              </button>
+            </Link>
+          </div>
         </SwiperSlide>
 
         {/* Digital Marketing */}
-        <SwiperSlide className="bg-gradient-to-r from-pink-500 to-purple-500 text-white p-8 rounded-lg shadow-lg text-center h-[400px] flex flex-col justify-between">
-          <h3 className="text-2xl font-semibold text-black">
-            Digital Marketing
-          </h3>
-          <p className="text-base">
-            Learn SEO, SEM, Social Media Marketing, Content Marketing, and more
-            to excel in the world of digital marketing.
-          </p>
-          <Link to={"/course"}>
-          <button
-            className="mt-4 bg-white text-pink-600 py-2 px-6 rounded-lg shadow-lg hover:bg-pink-100 focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-opacity-50 transition duration-300"
-            onClick={() => window.scrollTo(0, 0)}           >
-            Learn More
-          </button>
-          </Link>
+        <SwiperSlide className="flex flex-col items-center justify-center p-8 rounded-lg shadow-lg bg-white border-black border-2 ">
+        <div className="w-full flex flex-col items-center">
+            <img
+              src="./DIGITAL.webp" // Replace with actual image URL
+              alt="Java Full Stack"
+              className="w-full aspect-video object-cover rounded-lg mb-4"
+              loading="lazy"
+
+            />
+            <h2 className="text-xl md:text-2xl font-semibold text-orange-600 mb-2 text-center">
+              Digital Marketing
+            </h2>
+            <p className=" mb-4 text-center">
+              Learn SEO, SEM, Social Media Marketing, Content Marketing, a in
+              the world of digital marketing. Develop strategies to boost online
+              presence, drive traffic, enhance brand awareness, and maximize
+              conversions for businesses.
+            </p>
+            <Link to={"/course"}>
+              <button
+                className="bg-black text-white py-1 px-3 md:py-2 md:px-6 rounded-lg shadow-lg hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-50 transition duration-300"
+                onClick={() => window.scrollTo(0, 0)} // Scroll to top on click
+              >
+                Learn More
+              </button>
+            </Link>
+          </div>
         </SwiperSlide>
 
         {/* Video Editing */}
-        <SwiperSlide className="bg-gradient-to-r from-yellow-500 to-red-500 text-white p-8 rounded-lg shadow-lg text-center h-[400px] flex flex-col justify-between">
-          <h3 className="text-2xl font-semibold text-black">Video Editing</h3>
-          <p className="text-base">
-            Master video editing skills with industry-standard tools like Adobe
-            Premiere Pro, Final Cut Pro, and more.
-          </p>
-          <Link to={"/course"}>
-          <button
-            className="mt-4 bg-white text-yellow-600 py-2 px-6 rounded-lg shadow-lg hover:bg-yellow-100 focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:ring-opacity-50 transition duration-300"
-            onClick={() => window.scrollTo(0, 0)}           >
-            Learn More
-          </button>
-          </Link>
-        </SwiperSlide>
+        <SwiperSlide className="flex flex-col items-center justify-center p-8 rounded-lg shadow-lg bg-white border-black border-2 ">
+        <div className="w-full flex flex-col items-center">
+            <img
+              src="./EDITING.webp" // Replace with actual image URL
+              alt="Java Full Stack"
+              className="w-full aspect-video object-cover rounded-lg mb-4"
+              loading="lazy"
 
+            />
+            <h2 className="text-xl md:text-2xl font-semibold text-orange-600 mb-2 text-center">
+              Video Editing
+            </h2>
+            <p className=" mb-4 text-center">
+              Learn to edit stunning, professional-quality videos using tools
+              like Adobe Premiere Pro, Final Cut Pro, and DaVinci Resolve. Gain
+              expertise in color grading, motion graphics, and visual effects to
+              create impactful videos.
+            </p>
+            <Link to={"/course"}>
+              <button
+                className="bg-black text-white py-1 px-3 md:py-2 md:px-6 rounded-lg shadow-lg hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-50 transition duration-300"
+                onClick={() => window.scrollTo(0, 0)} // Scroll to top on click
+              >
+                Learn More
+              </button>
+            </Link>
+          </div>
+        </SwiperSlide>
         {/* Graphic Designing */}
-        <SwiperSlide className="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-8 rounded-lg shadow-lg text-center h-[400px] flex flex-col justify-between">
-          <h3 className="text-2xl font-semibold text-black">
-            Graphic Designing
-          </h3>
-          <p className="text-base">
-            Unlock your creativity with Adobe Photoshop, Illustrator, and
-            CorelDRAW to design stunning graphics.
-          </p>
-          <Link to={"/course"}>
-          <button
-            className="mt-4 bg-white text-purple-600 py-2 px-6 rounded-lg shadow-lg hover:bg-purple-100 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50 transition duration-300"
-            onClick={() => window.scrollTo(0, 0)}           >
-            Learn More
-          </button>
-          </Link>
-        </SwiperSlide>
+        <SwiperSlide className="flex flex-col items-center justify-center p-8 rounded-lg shadow-lg bg-white border-black border-2 ">
+        <div className="w-full flex flex-col items-center">
+            <img
+              src="./GraphicDesign.webp" // Replace with actual image URL
+              alt="Java Full Stack"
+              className="w-full aspect-video object-cover rounded-lg mb-4"
+              loading="lazy"
 
+            />
+            <h2 className="text-xl md:text-2xl font-semibold text-orange-600 mb-2 text-center">
+              Graphic Designing
+            </h2>
+            <p className=" mb-4 text-center">
+              Master Adobe Photoshop, Illustrator, and CorelDRAW to create
+              designs for both print and digital media. Learn essential skills
+              like typography, image manipulation, logo design, and branding.
+            </p>
+            <Link to={"/course"}>
+              <button
+                className="bg-black text-white py-1 px-3 md:py-2 md:px-6 rounded-lg shadow-lg hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-50 transition duration-300"
+                onClick={() => window.scrollTo(0, 0)} // Scroll to top on click
+              >
+                Learn More
+              </button>
+            </Link>
+          </div>
+        </SwiperSlide>
         {/* WordPress */}
-        <SwiperSlide className="bg-gradient-to-r from-blue-500 to-green-500 text-white p-8 rounded-lg shadow-lg text-center h-[400px] flex flex-col justify-between">
-          <h3 className="text-2xl font-semibold text-black">WordPress</h3>
-          <p className="text-base">
-            Learn WordPress to create stunning websites with themes, plugins,
-            and customizations.
-          </p>
-          <Link to={"/course"}>
-          <button
-            className="mt-4 bg-white text-blue-600 py-2 px-6 rounded-lg shadow-lg hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50 transition duration-300"
-            onClick={() => window.scrollTo(0, 0)}           >
-            Learn More
-          </button>
-          </Link>
-        </SwiperSlide>
+        <SwiperSlide className="flex flex-col items-center justify-center p-8 rounded-lg shadow-lg bg-white border-black border-2 ">
+        <div className="w-full flex flex-col items-center">
+            <img
+              src="./WORDPRESS.webp" // Replace with actual image URL
+              alt="Java Full Stack"
+              className="w-full aspect-video object-cover rounded-lg mb-4"
+              loading="lazy"
 
-        {/* CRT */}
-        <SwiperSlide className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white p-8 rounded-lg shadow-lg text-center h-[400px] flex flex-col justify-between">
-          <h3 className="text-2xl font-semibold text-black">CRT</h3>
-          <p className="text-base">
-            Prepare for campus recruitment with aptitude, reasoning, and
-            technical training.
-          </p>
-          <Link to={"/course"}>
-          <button
-            className="mt-4 bg-white text-teal-600 py-2 px-6 rounded-lg shadow-lg hover:bg-teal-100 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:ring-opacity-50 transition duration-300"
-            onClick={() => window.scrollTo(0, 0)}           >
-            Learn More
-          </button>
-          </Link>
+            />
+            <h2 className="text-xl md:text-2xl font-semibold text-orange-600 mb-2 text-center">
+              WordPress
+            </h2>
+            <p className=" mb-4 text-center">
+              Learn how to create professional websites using WordPress. Master
+              the art of customizing themes, integrating plugins, and leveraging
+              advanced features to build dynamic, responsive websites like
+              e-commorce.
+            </p>
+            <Link to={"/course"}>
+              <button
+                className="bg-black text-white py-1 px-3 md:py-2 md:px-6 rounded-lg shadow-lg hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-50 transition duration-300"
+                onClick={() => window.scrollTo(0, 0)} // Scroll to top on click
+              >
+                Learn More
+              </button>
+            </Link>
+          </div>
         </SwiperSlide>
-
         {/* English Speaking */}
-        <SwiperSlide className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white p-8 rounded-lg shadow-lg text-center h-[400px] flex flex-col justify-between">
-          <h3 className="text-2xl font-semibold text-black">
-            English Speaking
-          </h3>
-          <p className="text-base">
-            Improve your English speaking skills and gain confidence in
-            professional communication.
-          </p>
-          <Link to={"/course"}>
-          <button
-            className="mt-4 bg-white text-indigo-600 py-2 px-6 rounded-lg shadow-lg hover:bg-indigo-100 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-opacity-50 transition duration-300"
-            onClick={() => window.scrollTo(0, 0)}           >
-            Learn More
-          </button>
-          </Link>
+        <SwiperSlide className="flex flex-col items-center justify-center p-8 rounded-lg shadow-lg bg-white border-black border-2 ">
+        <div className="w-full flex flex-col items-center">
+            <img
+              src="./ENGLISH.webp" // Replace with actual image URL
+              alt="Java Full Stack"
+              className="w-full aspect-video object-cover rounded-lg mb-4"
+              loading="lazy"
+
+            />
+            <h2 className="text-xl md:text-2xl font-semibold text-orange-600 mb-2 text-center">
+              English Speaking
+            </h2>
+            <p className=" mb-4 text-center ">
+              Enhance your spoken English skills with this comprehensive course.
+              Focus on improving pronunciation, vocabulary, grammar, tenses, and
+              conversational abilities. Gain the confidence to speak clearly and
+              effectively in any situation.
+            </p>
+            <Link to={"/course"}>
+              <button
+                className="bg-black text-white py-1 px-3 md:py-2 md:px-6 rounded-lg shadow-lg hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-50 transition duration-300"
+                onClick={() => window.scrollTo(0, 0)} // Scroll to top on click
+              >
+                Learn More
+              </button>
+            </Link>
+          </div>
+        </SwiperSlide>
+        {/* CRT */}
+        <SwiperSlide className="flex flex-col items-center justify-center p-8 rounded-lg shadow-lg bg-white border-black border-2 ">
+        <div className="w-full flex flex-col items-center">
+            <img
+              src="./CRT.webp" // Replace with actual image URL
+              alt="Java Full Stack"
+              className="w-full aspect-video object-cover rounded-lg mb-4"
+              loading="lazy"
+
+            />
+            <h2 className="text-xl md:text-2xl font-semibold text-orange-600 mb-2 text-center">
+              Campus Recruitment Training (CRT)
+            </h2>
+            <p className="  mb-4 text-center">
+              Prepare for campus recruitment with aptitude, reasoning, and
+              interview preparation techniques. Build confidence and improve
+              your chances of landing your job.
+            </p>
+            <Link to={"/course"}>
+              <button
+                className="bg-black text-white py-1 px-3 md:py-2 md:px-6 rounded-lg shadow-lg hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-50 transition duration-300"
+                onClick={() => window.scrollTo(0, 0)} // Scroll to top on click
+              >
+                Learn More
+              </button>
+            </Link>
+          </div>
         </SwiperSlide>
 
-        {/* Personality Development */}
+        {/* More SwiperSlides for other courses here */}
       </Swiper>
 
       {/* Left and Right Navigation Arrows */}

@@ -67,13 +67,7 @@ function Freebook  () {
 
   return (
    <>
-    <div className='max-w-screen-2xl container mx-auto md:px-20 px-4 '>
-        <div>
-        <h1 className='font-bold text-xl pb-2' >Free Content Available</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim minus omnis rerum ipsam voluptatem doloremque, quod qui odio, eius excepturi, saepe distinctio sequi! Quaerat repellendus, necessitatibus est ratione aperiam fugiat.</p>
-        
-        </div>
- 
+    <div className='max-w-screen-2xl container mx-auto md:px-8 px-4 '>
     <div>
     <Slider {...settings}>
        

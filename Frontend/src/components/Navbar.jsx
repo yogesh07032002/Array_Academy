@@ -1,33 +1,18 @@
-import React, { useEffect, useState } from "react";
 import {
   faFacebook,
   faInstagram,
   faLinkedin,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import { useEffect, useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 function Navbar() {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
   const [sticky, setSticky] = useState(false);
   const [isNotesOpen, setIsNotesOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const element = document.documentElement;
-    const body = document.body;
-
-    if (theme === "dark") {
-      element.classList.add("dark");
-      body.classList.add("dark");
-    } else {
-      element.classList.remove("dark");
-      body.classList.remove("dark");
-    }
-    localStorage.setItem("theme", theme);
-  }, [theme]);
-
   useEffect(() => {
     const handleScroll = () => {
       setSticky(window.scrollY > 0); // Change sticky state on scroll
@@ -40,53 +25,51 @@ function Navbar() {
 
   const navItems = (
     <>
+    
       <li>
         <a href="/">Home</a>
       </li>
       <li>
-        <a href="/course">Courses</a>
-      </li>
-      <li>
-        <a href="/contact">Contact</a>
-      </li>
-      <li>
         <a href="/about">About</a>
       </li>
+      <li>
+        <a href="/course">Courses</a>
+      </li>
+
       <li>
         <a href="/why">Why Us</a>
       </li>
       <li>
         <a href="/internship">Internships</a>
       </li>
+      <li>
+        <a href="/contact">Contact</a>
+      </li>
     </>
   );
 
-  // const notesItems = [
-  //   { href: "/notes/java", label: "Java" },
-  //   { href: "/notes/python", label: "Python" },
-  //   { href: "/notes/mern", label: "MERN" },
-  //   { href: "/notes/cloud", label: "Cloud Computing" },
-  //   { href: "/notes/datascience", label: "Data Science" },
-  // ];
-
   const socialLinks = [
     {
-      href: "https://www.facebook.com",
+      href: "https://www.facebook.com/arraylogic.academy",
+      target: "_blank",
       icon: faFacebook,
       style: "text-blue-600 hover:text-blue-800",
     },
     {
-      href: "https://www.twitter.com",
+      href: "https://www.twitter.com/arraylogic_academy",
+      target: "_blank",
       icon: faTwitter,
       style: "text-blue-400 hover:text-blue-600",
     },
     {
-      href: "https://www.linkedin.com",
+      href: "https://www.linkedin.com/company/arraylogic-academy",
+      target: "_blank",
       icon: faLinkedin,
       style: "text-blue-500 hover:text-blue-700",
     },
     {
-      href: "https://www.instagram.com",
+      href: "https://www.instagram.com/arraylogic_academy",
+      target: "_blank",
       icon: faInstagram,
       style: "text-pink-500 hover:text-pink-700",
     },
@@ -138,19 +121,24 @@ function Navbar() {
                 display: "flex", // Use flex to align items
                 flexDirection: "column", // Stack items vertically
                 justifyContent: "flex-start", // Align items to the top
-                gap: "20px", 
-               fontWeight: "bold"
+                gap: "20px",
+                fontWeight: "bold",
               }}
             >
               {navItems}
               {/* Notes Button for Mobile */}
               <li>
-                <button
-                  onClick={() => setIsNotesOpen((prev) => !prev)}
-                  className="text-orange-500 pr-2 md:pr-5 font-bold text-xl md:text-xl md:px-4 md:py-2 rounded-md duration-300"
-                >
-                  Notes
-                </button>
+                <Link to="/notes">
+                  {" "}
+                  <button
+                    // onClick={() => setIsNotesOpen((prev) => !prev)}
+                    // onClick={() => window.scrollTo(0, 0)}
+
+                    className="text-orange-500 pr-2 md:pr-5 font-bold text-xl md:text-xl md:px-4 md:py-2 rounded-md duration-300"
+                  >
+                    Notes
+                  </button>
+                </Link>
                 {isNotesOpen && (
                   <ul className="absolute left-0 mt-2 bg-white text-black shadow-lg w-48 rounded-lg z-[9999]">
                     {notesItems.map((item) => (
@@ -166,10 +154,9 @@ function Navbar() {
                   </ul>
                 )}
               </li>
-              
+
               {/* Social Media Icons for Mobile */}
-              <div className="flex space-x-3 mt-24 pt-60 ">
-                
+              <div className="flex space-x-3 mt-20 pt-40 ">
                 {socialLinks.map((link, index) => (
                   <a
                     key={index}
@@ -177,7 +164,6 @@ function Navbar() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`${link.style} text-2xl ml-5    `}
-        
                   >
                     <FontAwesomeIcon icon={link.icon} />
                   </a>
@@ -185,9 +171,10 @@ function Navbar() {
               </div>
             </ul>
           </div>
-          <a className="hidden sm:block md:text-xl font-bold cursor-pointer">
+       <Link to="/">
+       <a className="hidden sm:block md:text-xl font-bold cursor-pointer">
             ArrayLogic Academy
-          </a>
+          </a></Link>
         </div>
 
         <div className="navbar-end space-x-3">
@@ -197,12 +184,14 @@ function Navbar() {
 
           {/* Notes Dropdown for Desktop */}
           <div className="relative">
-            <button
-              onClick={() => setIsNotesOpen((prev) => !prev)}
-              className="text-orange-500 hidden sm:block pr-2 md:pr-5 font-bold text-xl md:text-xl md:px-4 md:py-2 rounded-md duration-300"
-            >
-              Notes
-            </button>
+            <Link to="/notes">
+              <button
+                onClick={() => setIsNotesOpen((prev) => !prev)}
+                className="text-orange-500 hidden sm:block pr-2 md:pr-5 font-bold text-xl md:text-xl md:px-4 md:py-2 rounded-md duration-300"
+              >
+                Notes
+              </button>
+            </Link>
             {isNotesOpen && (
               <ul className="absolute left-0 mt-2 bg-white text-black shadow-lg w-48 rounded-lg z-[9999]">
                 {notesItems.map((item) => (

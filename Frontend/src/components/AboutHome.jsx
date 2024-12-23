@@ -1,5 +1,6 @@
 import React, { useCallback, useRef, useState } from "react";
 
+import { Link } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 
 const AboutHome = () => {
@@ -36,42 +37,42 @@ const AboutHome = () => {
   };
 
   return (
-    <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 py-8">
-      <h1 className="text-center font-extrabold text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 mt-0 mb-4 animate__animated animate__fadeIn">
-        About Us
+    <div className="max-w-screen-2xl container md:px-16 px-4 py-4">
+      <h1 className="text-center font-extrabold text-xl md:text-3xl text-black mt-1 mb-1 md:mb-4">
+        ArrayLogic Academy - Best IT Courses Institute
       </h1>
-      <p className="text-lg text-gray-700 leading-relaxed tracking-wide space-y-4 animate__animated animate__fadeIn animate__delay-2s">
-        Welcome to ArrayLogic Academy, your trusted partner in IT education and
-        career development. We are committed to equipping students with the
-        skills and confidence to excel in today’s competitive environment.
-        <br />
-        <br />
-        Our diverse range of courses includes Java Full Stack, MERN, MEAN,
-        Python Full Stack, Cloud Computing, Data Science, Machine Learning,
-        Artificial Intelligence, AWS, Aptitude, CRT (Campus Recruitment
-        Training), and English Speaking. With these programs, we ensure our
-        learners are not only technically proficient but also equipped with
-        essential soft skills to thrive in professional settings.
-        <br />
-        <br />
-        Guided by expert trainers with years of real-world experience, we
-        provide hands-on learning, live projects, and one-on-one mentorship to
-        help you stand out. Whether you’re starting your career or seeking to
-        upskill, ArrayLogic Academy is your gateway to a successful future.
-        <br />
-        <br />
-        Join us and transform your potential into expertise while gaining the
-        confidence to conquer challenges in the IT industry and beyond!
+      <p className=" text-black">
+        Welcome to ArrayLogic Academy, Pune's premier IT Training Institute and
+        a pinnacle of excellence in software education. At ArrayLogic Academy,
+        we go beyond traditional learning by offering a curriculum designed to
+        empower individuals in today’s dynamic technological world. As a leading
+        software training institute in Pune, India, we specialize in a variety
+        of in-demand courses, including software testing (manual and automation
+        testing), Python development, Java development, data science, cloud
+        computing, UI/UX, Graphics Designing, Video Editing, Digital Marketing,
+        SEO and more.
       </p>
 
-      <div className="mt-8 text-center">
-        <button
-          onClick={handleFormToggle}
-          className="bg-gradient-to-r from-green-400 to-blue-500 text-white px-6 py-3 rounded-full text-lg font-semibold transition-transform duration-300 hover:scale-105 transform"
-        >
-          Join Us Now
-        </button>
-      </div>
+      <div className="mt-5 text-center flex flex-row lg:flex-row lg:justify-center gap-2">
+  {/* Join Us Now Button */}
+  <Link>
+    <button
+      onClick={handleFormToggle}
+      className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-1 md:px-8 md:py-3 lg:px-6 lg:py-3 rounded-full md:text-lg font-semibold transition-transform duration-300 hover:scale-105 transform shadow-lg ml-8"
+    >
+      Join Us Now
+    </button>
+  </Link>
+
+  {/* Read More Button */}
+  <Link to="/about">
+    <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-1 md:px-8 md:py-3 lg:px-6 lg:py-3 rounded-full md:text-lg font-semibold transition-transform duration-300 hover:scale-105 transform shadow-lg ">
+      Read More
+    </button>
+  </Link>
+</div>
+
+
 
       {showForm && (
         <div
@@ -90,32 +91,34 @@ const AboutHome = () => {
               Join Us
             </h2>
             <form ref={form} onSubmit={sendEmail}>
-              {["Name", "Email", "Phone Number", "Message"].map((field, idx) => (
-                <div className="mb-4" key={idx}>
-                  <label
-                    htmlFor={field.toLowerCase().replace(" ", "_")}
-                    className="block text-gray-700 text-sm font-bold mb-2"
-                  >
-                    {field}
-                  </label>
-                  {field === "Message" ? (
-                    <textarea
-                      name="message"
-                      id="message"
-                      placeholder={`Your ${field}`}
-                      className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    ></textarea>
-                  ) : (
-                    <input
-                      name={`from_${field.toLowerCase().replace(" ", "_")}`}
-                      type={field === "Email" ? "email" : "text"}
-                      id={field.toLowerCase().replace(" ", "_")}
-                      placeholder={`Your ${field}`}
-                      className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    />
-                  )}
-                </div>
-              ))}
+              {["Name", "Email", "Phone Number", "Message"].map(
+                (field, idx) => (
+                  <div className="mb-4" key={idx}>
+                    <label
+                      htmlFor={field.toLowerCase().replace(" ", "_")}
+                      className="block text-gray-700 text-sm font-bold mb-2"
+                    >
+                      {field}
+                    </label>
+                    {field === "Message" ? (
+                      <textarea
+                        name="message"
+                        id="message"
+                        placeholder={`Your ${field}`}
+                        className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      ></textarea>
+                    ) : (
+                      <input
+                        name={`from_${field.toLowerCase().replace(" ", "_")}`}
+                        type={field === "Email" ? "email" : "text"}
+                        id={field.toLowerCase().replace(" ", "_")}
+                        placeholder={`Your ${field}`}
+                        className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      />
+                    )}
+                  </div>
+                )
+              )}
               <div className="text-center">
                 <button
                   type="submit"

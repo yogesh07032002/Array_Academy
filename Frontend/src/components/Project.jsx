@@ -1,7 +1,8 @@
 import React, { useRef } from "react";
 
-import ArrayHome3 from "../../public/ArrayHome3.jpg";
+import ArrayHome3 from "../../public/ArrayHome3.webp";
 import Footer from "./Footer";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 
@@ -32,6 +33,12 @@ function Project() {
 
   return (
     <>
+    <Helmet>
+  <title>Project Development for College Students & Clients | ArrayLogic Academy - IT Training in Pune</title>
+  <meta name="description" content="ArrayLogic Academy in Pune offers expert Project Development services for both college students and clients. Our IT training programs in Java, MERN, Python, Data Science, and AI enable students to work on real-world projects, while clients can collaborate with us for professional software development solutions." />
+  <meta name="keywords" content="Project development for college students, client project development Pune, real-world IT projects, Java Full Stack projects, MERN Stack software development, Python project development, Data Science projects, AI development for clients, software development services Pune, hands-on IT training, college student project collaboration, client IT solutions, IT industry experience, project-based learning for college students" />
+</Helmet>
+
       {/* Image Section */}
       <div className="mt-12">
         <img
