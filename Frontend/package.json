@@ -3,14 +3,11 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "author": "Yogesh Ingole",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "analyze": "vite build --mode analyze",
-    "format": "prettier --write ."
+    "preview": "vite preview"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -29,13 +26,7 @@
     "react-router-dom": "^6.26.2",
     "react-slick": "^0.30.2",
     "slick-carousel": "^1.8.1",
-    "swiper": "^11.1.14",
-    "framer-motion": "^10.12.16",
-    "prop-types": "^15.8.1",
-    "react-query": "^4.35.0",
-    "redux": "^4.2.1",
-    "react-redux": "^8.1.0",
-    "zustand": "^4.3.5"
+    "swiper": "^11.1.14"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
@@ -52,10 +43,6 @@
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.12",
     "vite": "^5.4.1",
-    "vite-plugin-compress": "^2.1.1",
-    "vite-plugin-pwa": "^0.16.8",
-    "vite-plugin-svgr": "^3.2.0",
-    "prettier": "^3.2.2",
-    "rollup-plugin-visualizer": "^6.8.2"
+    "vite-plugin-compress": "^2.1.1"
   }
 }
