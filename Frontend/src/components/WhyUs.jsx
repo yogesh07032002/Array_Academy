@@ -1,6 +1,5 @@
 import { Helmet } from "react-helmet";
 import React from "react";
-import whyimg from "../../public/whyimg.webp";
 
 function WhyUs() {
   return (
@@ -8,11 +7,8 @@ function WhyUs() {
   
 
       <div className="mt-16">
-        <img
-          src={whyimg}
-          alt="ArrayLogic Academy"
-          className="w-full h-auto"
-        />
+      <img src="../../public/whyimg.webp" alt="ArrayLogic Academy" className="w-full h-auto" />
+
       </div>
       <section className="bg-white py-4 px-9 ">
         <div className="container mx-auto text-center">
